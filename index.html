@@ -67,21 +67,21 @@
 
                 <div class="content-section" id="product-manager">
                     <h2><i class="bi bi-briefcase"></i> 产品经理</h2>
-                    <p>企业、用户、产品、设计、开发、测试全线知识沉淀</p>
-                    <p>三段行业领先企业核心岗位实习经历</p>
+                    <p>企业、用户、产品、设计、开发、数据、测试、大模型全栈知识沉淀</p>
+                    <p>秘塔AI搜索-理想汽车-字节跳动</p>
                     <p>独立主导并成功交付一款公司核心业务系统</p>
                 </div>
 
                 <div class="content-section" id="media">
                     <h2><i class="bi bi-camera"></i> 自媒体博主</h2>
-                    <p>小红书2700+粉丝，1w+获赞收藏</p>
+                    <p>小红书4200+粉丝，2.5w+获赞收藏</p>
                     <p>商业化运营收入1w+</p>
                 </div>
 
                 <div class="content-section" id="explorer">
                     <h2><i class="bi bi-globe"></i> 世界探索者</h2>
                     <p>探寻世界与人的本质</p>
-                    <p>寻找生命的支点</p>
+                    <p>玄学、佛教、天文、物理修行中</p>
                 </div>
             </div>
 
@@ -117,11 +117,16 @@
                 <p class="subtitle">在需求与代码间实现 <span class="highlight">价值传递</span>的数字世界构建者</p>
                 
                 <div class="content-section">
-                    <h2><i class="bi bi-car-front"></i> 理想汽车 产品经理（方向：b端应用产品）</h2>
+                    <h2><i class="bi bi-car-front"></i> 字节跳动 产品经理（方向：ai功能＋策略）</h2>
+                    <p>AIGC部门内部产品化解决方案</p>
+                    <p>AIGC图像审核模型全链路优化</p>
+                </div>
+
+                <div class="content-section">
+                    <h2><i class="bi bi-car-front"></i> 理想汽车 产品经理（方向：b端平台产品）</h2>
                     <p>设计变更管理系统ECN单据改造项目</p>
                     <p>配接任务管理系统建设项目</p>
                     <p>产研数据效能建设、数据训战课程开发</p>
-                    <p>产品与研发解决方案部新人能力sop，运营周报sop沉淀</p>
                 </div>
 
                 <div class="content-section">
@@ -144,6 +149,7 @@
                     <p>产品设计：Figma，Axure</p>
                     <p>产品开发：Python，HTML + CSS + Javascript，mySQL，Cursor</p>
                     <p>数据处理：mySQL，帆软BI</p>
+                    <p>AI：PE，RAG，Agent，SFT，RL</p>
                     <p>办公技能：飞书云文档，飞书低代码，Ps，Pr</p>
                 </div>
             </div>
@@ -176,8 +182,40 @@
                 <span class="tag">终身学习</span>
                 <span class="tag">......</span>
             </div>
+            
+            <!-- AI对话按钮 -->
+            <div class="ai-chat-button-container">
+                <button id="ai-chat-button" class="ai-chat-button">
+                    <i class="bi bi-robot"></i> 与我对话
+                </button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
+
+    <!-- AI对话窗口 -->
+    <div id="ai-chat-container" class="ai-chat-container">
+        <div class="ai-chat-window">
+            <div class="ai-chat-header">
+                <h3>AI助手</h3>
+                <button id="ai-chat-close" class="ai-chat-close">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div id="ai-chat-body" class="ai-chat-body">
+                <div class="ai-message">
+                    <div class="message-content">
+                        <p>你好！我是任一凡，欢迎和我交流！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-chat-footer">
+                <input type="text" id="ai-chat-input" class="ai-chat-input" placeholder="输入你的问题...">
+                <button id="ai-chat-send" class="ai-chat-send">
+                    <i class="bi bi-send"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html> 
