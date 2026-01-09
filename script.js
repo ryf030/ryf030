@@ -353,4 +353,51 @@ document.addEventListener('DOMContentLoaded', () => {
             sendMessage();
         }
     });
+    
+    // 网页预览弹窗功能
+    const webPreviewModal = document.getElementById('web-preview-modal');
+    const webPreviewIframe = document.getElementById('web-preview-iframe');
+    const webPreviewClose = document.getElementById('web-preview-close');
+    
+    // 获取所有卡片
+    const cards = document.querySelectorAll('.card');
+    
+    // 为每个卡片添加点击事件监听器
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const url = card.getAttribute('data-url');
+            
+            if (url) {
+                // 设置弹窗内容
+                webPreviewIframe.src = url;
+                
+                // 显示弹窗
+                webPreviewModal.style.display = 'block';
+            }
+        });
+    });
+    
+    // 关闭弹窗函数
+    function closeWebPreview() {
+        webPreviewModal.style.display = 'none';
+        // 清空iframe内容以防止持续加载
+        webPreviewIframe.src = '';
+    }
+    
+    // 点击关闭按钮关闭弹窗
+    webPreviewClose.addEventListener('click', closeWebPreview);
+    
+    // 点击遮罩层关闭弹窗
+    webPreviewModal.addEventListener('click', (e) => {
+        if (e.target === webPreviewModal) {
+            closeWebPreview();
+        }
+    });
+    
+    // 按ESC键关闭弹窗
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && webPreviewModal.style.display === 'block') {
+            closeWebPreview();
+        }
+    });
 }); 
