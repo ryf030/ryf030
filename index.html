@@ -3,378 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.classList.add('js');</script>
     <title>任一凡的个人网站</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- 左侧个人信息 -->
-        <div class="left-section">
-            <div class="profile-image">
-                <!-- 个人照片位置 -->
-                <div class="image-placeholder"> <img src="img\ryf030.jpg" >
+    <header class="site-header">
+        <nav class="site-nav" aria-label="页面导航">
+            <a href="#hero">首页</a>
+            <a href="#identities">身份</a>
+            <a href="#career">履历</a>
+            <a href="#knowledge">知识</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. 首屏：左图右文 -->
+        <section id="hero" class="hero" aria-label="首页">
+            <div class="hero-inner">
+                <div class="hero-photo">
+                    <img src="img/ryf030.jpg" alt="任一凡">
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">你好，我是任一凡</h1>
+                    <p class="hero-sub">：</p>
+                    <p class="hero-sub">欢迎来到我的个人空间</p>
+                    <p class="hero-roles">我是一名建筑师，产品经理，自媒体博主</p>
+                    <div class="hero-chat">
+                        <button type="button" id="ai-chat-button" class="hero-chat-btn">
+                            <i class="bi bi-chat-dots" aria-hidden="true"></i>
+                            <span>与我对话</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="personal-info">
-                <div class="info-item">
-                    <i class="bi bi-calendar"></i>
-                    <span>2002.02.04</span>
-                </div>
-                <div class="info-item">
-                    <i class="bi bi-stars"></i>
-                    <span>infj-t 水瓶座</span>
-                </div>
-                <div class="info-item">
-                    <i class="bi bi-book"></i>
-                    <span>清华大学-建筑-硕士</span>
-                </div>
-                <div class="info-item">
-                    <i class="bi bi-mortarboard"></i>
-                    <span>天津大学-建筑学-学士</span>
-                </div>
-                <div class="info-item">
-                    <i class="bi bi-person"></i>
-                    <span>ryf030</span>
-                </div>
-                <div class="info-item">
-                    <i class="bi bi-telephone"></i>
-                    <span>15935183788</span>
-                </div>
-                <div class="info-item">
-                    <i class="bi bi-envelope"></i>
-                    <span>1075101530@qq.com</span>
-                </div>
-                <div class="info-item">
-                    <i class="bi bi-chat"></i>
-                    <span>9548280116</span>
-                </div>
-            </div>
-        </div>
-       
-        <!-- 中间内容区域 -->
-        <div class="middle-section">
-            <!-- 不同页面的内容区域 -->
-            <div class="page-content active" id="home-content">
-                <h1>你好！我是任一凡，欢迎来到我的网站！</h1>
-                <p class="subtitle">我是一名 <span class="highlight">建筑师</span>，<span class="highlight">产品经理</span>，<span class="highlight">自媒体博主</span>，<span class="highlight">世界探索者</span></p>
-                
-                <div class="content-section" id="architect">
-                    <h2><i class="bi bi-building"></i> 建筑师</h2>
-                    <p>天大建筑本，清华建筑硕，专业第一保研</p>
+        </section>
+
+        <!-- 2. 四种身份：四卡片 -->
+        <section id="identities" class="section section-identities">
+            <h2 class="section-title reveal">我的<strong>身份</strong></h2>
+            <div class="identity-grid">
+                <article class="identity-card reveal">
+                    <h3>建筑师</h3>
+                    <div class="identity-card-photo">
+                        <img src="img3/建筑师.jpg" alt="建筑师">
+                    </div>
+                    <p>天大建筑学士，清华建筑硕士</p>
+                    <p>专业第一保研</p>
                     <p>十余项校园荣誉，五次国际竞赛获奖</p>
-                    <p>融合 艺术，技术，人文，科学的物理空间架构师</p>
-                </div>
+                </article>
+                <article class="identity-card reveal">
+                    <h3>产品经理</h3>
+                    <div class="identity-card-photo">
+                        <img src="img3/产品经理.jpg" alt="产品经理">
+                    </div>
+                    <p>四段AI产品实习</p>
+                    <p>理想汽车-字节跳动-美团-猿辅导</p>
+                    <p>清华大学信息服务中心产品负责人</p>
+                </article>
+                <article class="identity-card reveal">
+                    <h3>自媒体博主</h3>
+                    <div class="identity-card-photo">
+                        <img src="img3/自媒体博主.jpg" alt="自媒体博主">
+                    </div>
+                    <p>小红书4500+粉丝，2.5w+获赞</p>
+                    <p>设计、产品、求职、AI内容向输出</p>
+                    <p>知识分享IP，商业化运营收入1w+</p>
+                </article>
+        </section>
 
-                <div class="content-section" id="product-manager">
-                    <h2><i class="bi bi-briefcase"></i> 产品经理</h2>
-                    <p>五段实习，奇绩创坛-秘塔AI搜索-理想汽车-字节跳动-美团</p>
-                    <p>清华大学信息服务中心水木汇小程序产品负责人</p>
-                    <p>企业、用户、产品、设计、开发、数据、测试、大模型全栈知识沉淀</p>
-                    <p>在需求与代码间实现价值传递的数字世界构建者</p>
-                </div>
+        <!-- 3. 职业履历：极简时间轴 -->
+        <section id="career" class="section section-career">
+            <h2 class="section-title reveal">职业<strong>履历</strong></h2>
+            <p class="section-lead reveal">从洞察真实需求出发，以创造性工作为径，将价值深植于业务与用户之中。</p>
+            <ol class="timeline" id="career-timeline">
+                <li class="timeline-item timeline-item--interactive reveal" tabindex="0" role="button" data-career-id="yuanfudao" aria-label="查看猿辅导履历详情">
+                    <span class="timeline-date">2026.03 — 2026.05</span>
+                    <div class="timeline-body">
+                        <h3>猿辅导 · 飞象星球 · AI产品经理</h3>
+                        <p>AI学练机产品设计（0-1）</p>
+                        <p>Agent体系设计与搭建</p>
+                    </div>
+                </li>
+                <li class="timeline-item timeline-item--interactive reveal" tabindex="0" role="button" data-career-id="meituan" aria-label="查看美团履历详情">
+                    <span class="timeline-date">2025.12 — 2026.03</span>
+                    <div class="timeline-body">
+                        <h3>美团 · 首页搜索 · 策略产品经理</h3>
+                        <p>搜索策略：量化评估框架与问题解决机制</p>
+                        <p>搜索策略：春节投放词条效果优化</p>
+                    </div>
+                </li>
+                <li class="timeline-item timeline-item--interactive reveal" tabindex="0" role="button" data-career-id="bytedance" aria-label="查看字节跳动履历详情">
+                    <span class="timeline-date">2025.05 — 2025.08</span>
+                    <div class="timeline-body">
+                        <h3>字节跳动 · 内容质量中心 · AI 产品经理</h3>
+                        <p>业务提效：AIGC 部门内部产品化解决方案</p>
+                        <p>算法共建：AIGC 图像审核模型全链路优化</p>
+                    </div>
+                </li>
+                <li class="timeline-item timeline-item--interactive reveal" tabindex="0" role="button" data-career-id="lixiang" aria-label="查看理想汽车履历详情">
+                    <span class="timeline-date">2024.12 — 2025.04</span>
+                    <div class="timeline-body">
+                        <h3>理想汽车 · IT 部门 · 产品经理</h3>
+                        <p>平台设计：配接任务管理系统建设</p>
+                        <p>数据基建：产研部门数据效能建设</p>
+                    </div>
+                </li>
+                <li class="timeline-item timeline-item--interactive reveal" tabindex="0" role="button" data-career-id="meta" aria-label="查看秘塔 AI 履历详情">
+                    <span class="timeline-date">2024.10 — 2025.12</span>
+                    <div class="timeline-body">
+                        <h3>秘塔 AI 搜索 · 产品部 · 产品运营</h3>
+                        <p>产品设计：秘塔AI学习训练营活动策划</p>
+                        <p>产品运营：专题模块知识库内容运营</p>
+                    </div>
+                </li>
+                <li class="timeline-item timeline-item--interactive reveal" tabindex="0" role="button" data-career-id="qiji" aria-label="查看奇绩创坛履历详情">
+                    <span class="timeline-date">2024.01 — 2024.03</span>
+                    <div class="timeline-body">
+                        <h3>奇绩创坛 · 行业研究</h3>
+                        <p>行业研究：10+ 份科技行业研究报告，20+ 份用户访谈报告，6 位创始人被投，3000w+ 投资款。</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
 
-                <div class="content-section" id="media">
-                    <h2><i class="bi bi-camera"></i> 自媒体博主</h2>
-                    <p>小红书4300+粉丝，2.5w+获赞收藏</p>
-                    <p>打造个人IP，商业化运营收入1w+</p>
-                    <p>灵感与故事，生活碎片的云端造梦师</p>
-                </div>
+        <!-- 4. 三块知识：三条横向滑动小方卡 -->
+        <section id="knowledge" class="section section-knowledge">
+            <h2 class="section-title reveal">知识<strong>沉淀</strong></h2>
 
-                <div class="content-section" id="explorer">
-                    <h2><i class="bi bi-globe"></i> 世界探索者</h2>
-                    <p>探寻世界与人的本质</p>
-                    <p>玄学、宗教、天文、物理修行中</p>
-                    <p>我与我周旋久，宁做我</p>
-                </div>
-            </div>
-        
-            <div class="page-content" id="product-manager-content">
-                <h1>职业履历</h1>
-                <p class="subtitle">从洞察 <span class="highlight">真实需求</span>出发，以 <span class="highlight">创造性</span>工作为径，最终将 <span class="highlight">价值深植</span>于业务与用户之中。这是我产品工作的全部热忱所在。</span></p>
-                
-                <div class="content-section">
-                    <h2><i class="bi bi-bag-heart"></i> 美团 首页搜索 策略产品经理</h2>
-                    <p>2025.12-2026.3</p>
-                    <p>搜索策略-春节投放词条效果优化</p>
-                </div>
-
-                <div class="content-section">
-                    <h2><i class="bi bi-play-circle"></i> 字节跳动 内容质量中心 AI产品经理</h2>
-                    <p>2025.5-2025.8</p>
-                    <p>业务提效-AIGC部门内部产品化解决方案</p>
-                    <p>算法共建-AIGC图像审核模型全链路优化</p>
-                </div>
-
-                <div class="content-section">
-                    <h2><i class="bi bi-car-front"></i> 理想汽车 IT部门 产品经理</h2>
-                    <p>2024.12-2025.4</p>
-                    <p>平台设计-配接任务管理系统建设、设计变更管理系统改造</p>
-                    <p>数据基建-产研部门数据效能建设</p>
-                </div>
-
-                <div class="content-section">
-                    <h2><i class="bi bi-search"></i> 秘塔AI搜索 产品部 产品运营</h2>
-                    <p>2024.10-2025.12</p>
-                    <p>产品设计-"秘塔AI学习训练营"活动策划与运营</p>
-                    <p>产品运营-"专题"模块知识库内容运营</p>
-                </div>
-
-                <div class="content-section">
-                    <h2><i class="bi bi-graph-up"></i> 奇缘创坛 行业研究</h2>
-                    <p>2024.1-2024.3</p>
-                    <p>行业研究-10+份科技行业研究报告，20+份用户访谈报告，6位创始人被投，3000w+投资款</p>
-                </div>
-
-                <div class="content-section">
-                    <h2><i class="bi bi-tools"></i>相关技能</h2>
-                    <p>产品规划：X-mind，Visio</p>
-                    <p>产品设计：Figma，Axure</p>
-                    <p>产品开发：Python，HTML + CSS + Javascript，mySQL，Cursor</p>
-                    <p>数据分析：mySQL，BI</p>
-                    <p>AI：PE，RAG，Agent，SFT，RL</p>
-                </div>
-            </div>
-            
-            <div class="page-content" id="product-content">
-                <h1>产品知识</h1>
-                <p class="subtitle">以<span class="highlight">“定义问题-解决问题”</span>为核心，深度剖析产品能力在<span class="highlight">功能</span>与<span class="highlight">策略</span>上的双重做功。</p>
-                <div class="cards-container">
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=OtHAdYIUyoegxzxJEsoc4KmrnYc&blockType=whiteboard&blockToken=BnACwQx65hV3HUbEEo3cxdtQnyg#OtHAdYIUyoegxzxJEsoc4KmrnYc">
-                        <div class="card-image">
-                            <img src="img2/产品知识/产品成长地图.jpg" alt="产品成长地图">
-                        </div>
+            <div class="knowledge-block">
+                <h3 class="knowledge-heading reveal">产品知识</h3>
+                <p class="knowledge-desc reveal">以「定义问题—解决问题」为核心，剖析产品在功能与策略上的双重做功。</p>
+                <div class="scroll-strip">
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=OtHAdYIUyoegxzxJEsoc4KmrnYc&blockType=whiteboard&blockToken=BnACwQx65hV3HUbEEo3cxdtQnyg#OtHAdYIUyoegxzxJEsoc4KmrnYc">
+                        <div class="card-image"><img src="img2/产品知识/产品成长地图.jpg" alt="产品成长地图"></div>
                         <div class="card-title">产品成长地图</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=QahDd6bfjoLSipx30iRc1e3fnic&blockType=whiteboard&blockToken=N0hGwNc5Qh5MyAbb8rlcXDKcn4c#QahDd6bfjoLSipx30iRc1e3fnic">
-                        <div class="card-image">
-                            <img src="img2/产品知识/产品核心基础.jpg" alt="产品核心基础">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=QahDd6bfjoLSipx30iRc1e3fnic&blockType=whiteboard&blockToken=N0hGwNc5Qh5MyAbb8rlcXDKcn4c#QahDd6bfjoLSipx30iRc1e3fnic">
+                        <div class="card-image"><img src="img2/产品知识/产品核心基础.jpg" alt="产品核心基础"></div>
                         <div class="card-title">产品核心基础</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=UAG0d1zzeovJn9x7lV3cFbJgnGe&blockType=whiteboard&blockToken=InDAwDvAIhI49xbYyAjc68OtnMf#UAG0d1zzeovJn9x7lV3cFbJgnGe">
-                        <div class="card-image">
-                            <img src="img2/产品知识/策略产品概述.jpg" alt="策略产品概述">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=UAG0d1zzeovJn9x7lV3cFbJgnGe&blockType=whiteboard&blockToken=InDAwDvAIhI49xbYyAjc68OtnMf#UAG0d1zzeovJn9x7lV3cFbJgnGe">
+                        <div class="card-image"><img src="img2/产品知识/策略产品概述.jpg" alt="策略产品概述"></div>
                         <div class="card-title">策略产品概述</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=Wli3dJsQZofVdCx39lxcGpjInNc&blockType=whiteboard&blockToken=CrJUwCY13hpmHsbDJXscYmb3n2g#Wli3dJsQZofVdCx39lxcGpjInNc">
-                        <div class="card-image">
-                            <img src="img2/产品知识/搜索策略产品.jpg" alt="搜索策略产品">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=Wli3dJsQZofVdCx39lxcGpjInNc&blockType=whiteboard&blockToken=CrJUwCY13hpmHsbDJXscYmb3n2g#Wli3dJsQZofVdCx39lxcGpjInNc">
+                        <div class="card-image"><img src="img2/产品知识/搜索策略产品.jpg" alt="搜索策略产品"></div>
                         <div class="card-title">搜索策略产品</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=V2oNdgN0JoERzoxA2mmcLLeAnog&blockType=whiteboard&blockToken=CQOXwr3J1hEhEXbEI0Sc3HBTnJh#V2oNdgN0JoERzoxA2mmcLLeAnog">
-                        <div class="card-image">
-                            <img src="img2/产品知识/推荐策略产品.jpg" alt="推荐策略产品">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=V2oNdgN0JoERzoxA2mmcLLeAnog&blockType=whiteboard&blockToken=CQOXwr3J1hEhEXbEI0Sc3HBTnJh#V2oNdgN0JoERzoxA2mmcLLeAnog">
+                        <div class="card-image"><img src="img2/产品知识/推荐策略产品.jpg" alt="推荐策略产品"></div>
                         <div class="card-title">推荐策略产品</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=Msn1d6scdowitUxaKXUcAP0TnBe&blockType=whiteboard&blockToken=KufTwdg9FhTclhbCxpLcgYEhnSg#Msn1d6scdowitUxaKXUcAP0TnBe">
-                        <div class="card-image">
-                            <img src="img2/产品知识/广告策略产品.jpg" alt="广告策略产品">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=Msn1d6scdowitUxaKXUcAP0TnBe&blockType=whiteboard&blockToken=KufTwdg9FhTclhbCxpLcgYEhnSg#Msn1d6scdowitUxaKXUcAP0TnBe">
+                        <div class="card-image"><img src="img2/产品知识/广告策略产品.jpg" alt="广告策略产品"></div>
                         <div class="card-title">广告策略产品</div>
                     </div>
                 </div>
             </div>
 
-            <div class="page-content" id="technology-content">
-                <h1>技术底蕴</h1>
-                <p class="subtitle">具备与研发深度协作的技术理解力，及利用技术工具快速验证与迭代原型的执行力。</p>
-                <div class="cards-container">
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=B0YSd3KXnoJl2ixbC7dcIdAEnKf&blockType=whiteboard&blockToken=DZB1wI2myh21Tzbr0PAcKjMrnaf#B0YSd3KXnoJl2ixbC7dcIdAEnKf">
-                        <div class="card-image">
-                             <img src="img2/技术底蕴/python-数据类型.jpg" alt="python-数据类型">
-                        </div>
+            <div class="knowledge-block">
+                <h3 class="knowledge-heading reveal">技术底蕴</h3>
+                <p class="knowledge-desc reveal">与研发深度协作的技术理解力，及用工具快速验证与迭代原型的执行力。</p>
+                <div class="scroll-strip">
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=B0YSd3KXnoJl2ixbC7dcIdAEnKf&blockType=whiteboard&blockToken=DZB1wI2myh21Tzbr0PAcKjMrnaf#B0YSd3KXnoJl2ixbC7dcIdAEnKf">
+                        <div class="card-image"><img src="img2/技术底蕴/python-数据类型.jpg" alt="python-数据类型"></div>
                         <div class="card-title">python-数据类型</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=GHxbdQXoZoFmZUxYxUycDMBAnve&blockType=whiteboard&blockToken=WHknwTwrOhUYTybmUcGc9Ig3nic#GHxbdQXoZoFmZUxYxUycDMBAnve">
-                        <div class="card-image">
-                             <img src="img2/技术底蕴/python-公共操作.jpg" alt="python-公共操作">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=GHxbdQXoZoFmZUxYxUycDMBAnve&blockType=whiteboard&blockToken=WHknwTwrOhUYTybmUcGc9Ig3nic#GHxbdQXoZoFmZUxYxUycDMBAnve">
+                        <div class="card-image"><img src="img2/技术底蕴/python-公共操作.jpg" alt="python-公共操作"></div>
                         <div class="card-title">python-公共操作</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=MtDUd1p3Oo0Yd4xYDMCczsWWnng&blockType=whiteboard&blockToken=Td0JwnI1MhMF2vb0rzmcjRAnnIb#MtDUd1p3Oo0Yd4xYDMCczsWWnng">
-                        <div class="card-image">
-                             <img src="img2/技术底蕴/python-函数.jpg" alt="python-函数">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=MtDUd1p3Oo0Yd4xYDMCczsWWnng&blockType=whiteboard&blockToken=Td0JwnI1MhMF2vb0rzmcjRAnnIb#MtDUd1p3Oo0Yd4xYDMCczsWWnng">
+                        <div class="card-image"><img src="img2/技术底蕴/python-函数.jpg" alt="python-函数"></div>
                         <div class="card-title">python-函数</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=Yx3adfQ3Ro0m4oxqVZPcm4Plnff&blockType=whiteboard&blockToken=ZODUwsTeghSgytbADbccrpNxnPa#Yx3adfQ3Ro0m4oxqVZPcm4Plnff">
-                        <div class="card-image">
-                             <img src="img2/技术底蕴/python-常用命令.jpg" alt="python-常用命令">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=Yx3adfQ3Ro0m4oxqVZPcm4Plnff&blockType=whiteboard&blockToken=ZODUwsTeghSgytbADbccrpNxnPa#Yx3adfQ3Ro0m4oxqVZPcm4Plnff">
+                        <div class="card-image"><img src="img2/技术底蕴/python-常用命令.jpg" alt="python-常用命令"></div>
                         <div class="card-title">python-常用命令</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=NqbBdBiQQowJolxXa8ycSRT4nHf&blockType=whiteboard&blockToken=Fxotwrkgkh3Wu0bdZRrcLcmFnGe#NqbBdBiQQowJolxXa8ycSRT4nHf">
-                        <div class="card-image">
-                             <img src="img2/技术底蕴/sql-数据查询.jpg" alt="sql-数据查询">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=NqbBdBiQQowJolxXa8ycSRT4nHf&blockType=whiteboard&blockToken=Fxotwrkgkh3Wu0bdZRrcLcmFnGe#NqbBdBiQQowJolxXa8ycSRT4nHf">
+                        <div class="card-image"><img src="img2/技术底蕴/sql-数据查询.jpg" alt="sql-数据查询"></div>
                         <div class="card-title">sql-数据查询</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=Yxz7dVQn5oHEydxFIU9cp1M6nug&blockType=whiteboard&blockToken=TjqPwoTPxhPQadbIgJmcxzu8nyh#Yxz7dVQn5oHEydxFIU9cp1M6nug">
-                        <div class="card-image">
-                             <img src="img2/技术底蕴/pandas-数据处理.jpg" alt="pandas-数据处理">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=Yxz7dVQn5oHEydxFIU9cp1M6nug&blockType=whiteboard&blockToken=TjqPwoTPxhPQadbIgJmcxzu8nyh#Yxz7dVQn5oHEydxFIU9cp1M6nug">
+                        <div class="card-image"><img src="img2/技术底蕴/pandas-数据处理.jpg" alt="pandas-数据处理"></div>
                         <div class="card-title">pandas-数据处理</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=XXp5dwrIqoo9SvxWGNEcLUvPnZb&blockType=whiteboard&blockToken=Co8Jw5pd5hhaSWb4PMQcB2T8nNB#XXp5dwrIqoo9SvxWGNEcLUvPnZb">
-                        <div class="card-image">
-                            <img src="img2/技术底蕴/scikitlearn-机器学习.jpg" alt="Scikitlearn-机器学习">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=XXp5dwrIqoo9SvxWGNEcLUvPnZb&blockType=whiteboard&blockToken=Co8Jw5pd5hhaSWb4PMQcB2T8nNB#XXp5dwrIqoo9SvxWGNEcLUvPnZb">
+                        <div class="card-image"><img src="img2/技术底蕴/scikitlearn-机器学习.jpg" alt="Scikitlearn-机器学习"></div>
                         <div class="card-title">Scikitlearn-机器学习</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=H6ROdSwDEoQfJ5xKhv7cA9zinhb&blockType=whiteboard&blockToken=J50lw5E59hFd2Bb9U2Zc54Iynne#H6ROdSwDEoQfJ5xKhv7cA9zinhb">
-                        <div class="card-image">
-                            <img src="img2/技术底蕴/pytorch-深度学习.jpg" alt="pytorch-深度学习">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/NbWEdHbQWo2NXixaAric4RIInwb?openbrd=1&doc_app_id=501&blockId=H6ROdSwDEoQfJ5xKhv7cA9zinhb&blockType=whiteboard&blockToken=J50lw5E59hFd2Bb9U2Zc54Iynne#H6ROdSwDEoQfJ5xKhv7cA9zinhb">
+                        <div class="card-image"><img src="img2/技术底蕴/pytorch-深度学习.jpg" alt="pytorch-深度学习"></div>
                         <div class="card-title">pytorch-深度学习</div>
                     </div>
                 </div>
             </div>
-            
-            <div class="page-content" id="aimodel-content">
-                <h1>AI大模型</h1>
-                <p class="subtitle">透彻理解大模型<span class="highlight">能力边界与优化手段</span>，专注探索<span class="highlight">人机协同</span>的最佳实践与产品范式。</p>
-                <div class="cards-container">
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=CerPdtauqoJs7Sx8SxLcSlrxnuh&blockType=whiteboard&blockToken=EEZGwlQ4YhBwl6bfl0lcWRlintg#CerPdtauqoJs7Sx8SxLcSlrxnuh">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/算法.jpg" alt="算法">
-                        </div>
+
+            <div class="knowledge-block">
+                <h3 class="knowledge-heading reveal">AI 大模型</h3>
+                <p class="knowledge-desc reveal">理解大模型能力边界与优化手段，探索人机协同的最佳实践与产品范式。</p>
+                <div class="scroll-strip">
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=CerPdtauqoJs7Sx8SxLcSlrxnuh&blockType=whiteboard&blockToken=EEZGwlQ4YhBwl6bfl0lcWRlintg#CerPdtauqoJs7Sx8SxLcSlrxnuh">
+                        <div class="card-image"><img src="img2/AI大模型/算法.jpg" alt="算法"></div>
                         <div class="card-title">算法</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=IyrKdBuHsoPLroxZU9ecaEsanii&blockType=whiteboard&blockToken=SJAawz1JehW2j8bId8gcOyNgnkc#IyrKdBuHsoPLroxZU9ecaEsanii">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/机器学习.jpg" alt="机器学习">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=IyrKdBuHsoPLroxZU9ecaEsanii&blockType=whiteboard&blockToken=SJAawz1JehW2j8bId8gcOyNgnkc#IyrKdBuHsoPLroxZU9ecaEsanii">
+                        <div class="card-image"><img src="img2/AI大模型/机器学习.jpg" alt="机器学习"></div>
                         <div class="card-title">机器学习</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=S9stdPdkYo8iYpx5m9zcnqLInId&blockType=whiteboard&blockToken=Wv5dwgrVrhPEwAbQuDPczc5knac#S9stdPdkYo8iYpx5m9zcnqLInId">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/神经网络.jpg" alt="神经网络">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=S9stdPdkYo8iYpx5m9zcnqLInId&blockType=whiteboard&blockToken=Wv5dwgrVrhPEwAbQuDPczc5knac#S9stdPdkYo8iYpx5m9zcnqLInId">
+                        <div class="card-image"><img src="img2/AI大模型/神经网络.jpg" alt="神经网络"></div>
                         <div class="card-title">神经网络</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=OU1xdo562owJdQx9NpJchgrNnld&blockType=whiteboard&blockToken=N3OnwkpB1hbWPQbuPemcm2EGnwb#OU1xdo562owJdQx9NpJchgrNnld">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/Tansformer模型.jpg" alt="Tansformer模型">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=OU1xdo562owJdQx9NpJchgrNnld&blockType=whiteboard&blockToken=N3OnwkpB1hbWPQbuPemcm2EGnwb#OU1xdo562owJdQx9NpJchgrNnld">
+                        <div class="card-image"><img src="img2/AI大模型/Tansformer模型.jpg" alt="Transformer模型"></div>
                         <div class="card-title">Transformer模型</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=S9P5dl3MJo6UvXx5U5jcwfHlnKd&blockType=whiteboard&blockToken=WJwAw3cJlhedxibW2mycnstnnic#S9P5dl3MJo6UvXx5U5jcwfHlnKd">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/自然语言处理.jpg" alt="自然语言处理">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=S9P5dl3MJo6UvXx5U5jcwfHlnKd&blockType=whiteboard&blockToken=WJwAw3cJlhedxibW2mycnstnnic#S9P5dl3MJo6UvXx5U5jcwfHlnKd">
+                        <div class="card-image"><img src="img2/AI大模型/自然语言处理.jpg" alt="自然语言处理"></div>
                         <div class="card-title">自然语言处理（NLP）</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=QMKCdmCR3oa2xJxPR7yc8Zgpnqw&blockType=whiteboard&blockToken=PTW6w6MSihdTQTbcFZhc2rj6nRg#QMKCdmCR3oa2xJxPR7yc8Zgpnqw">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/计算机视觉.jpg" alt="计算机视觉">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=QMKCdmCR3oa2xJxPR7yc8Zgpnqw&blockType=whiteboard&blockToken=PTW6w6MSihdTQTbcFZhc2rj6nRg#QMKCdmCR3oa2xJxPR7yc8Zgpnqw">
+                        <div class="card-image"><img src="img2/AI大模型/计算机视觉.jpg" alt="计算机视觉"></div>
                         <div class="card-title">计算机视觉（CV）</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=XNQWd9s5foLuXkxtXOxcOP8EnDg&blockType=whiteboard&blockToken=WUSFwIVa3hqNdlboYnycgIQEnyb#XNQWd9s5foLuXkxtXOxcOP8EnDg">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/多模态大模型.jpg" alt="多模态大模型">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=XNQWd9s5foLuXkxtXOxcOP8EnDg&blockType=whiteboard&blockToken=WUSFwIVa3hqNdlboYnycgIQEnyb#XNQWd9s5foLuXkxtXOxcOP8EnDg">
+                        <div class="card-image"><img src="img2/AI大模型/多模态大模型.jpg" alt="多模态大模型"></div>
                         <div class="card-title">多模态大模型</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=KdGfd30HGoeqfZxCWopcUGnpnZf&blockType=whiteboard&blockToken=P0j0wmGeihIrqXbqxJIc7rF4nxd#KdGfd30HGoeqfZxCWopcUGnpnZf">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/常用大模型.jpg" alt="常用大模型">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=KdGfd30HGoeqfZxCWopcUGnpnZf&blockType=whiteboard&blockToken=P0j0wmGeihIrqXbqxJIc7rF4nxd#KdGfd30HGoeqfZxCWopcUGnpnZf">
+                        <div class="card-image"><img src="img2/AI大模型/常用大模型.jpg" alt="常用大模型"></div>
                         <div class="card-title">常用大模型</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=VRCNdU6ACoBUf0x5XercHzIHnGl&blockType=whiteboard&blockToken=FxczwOVDphOoPobOAuPcwwQrnWc#VRCNdU6ACoBUf0x5XercHzIHnGl">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/提示工程.jpg" alt="提示工程">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=VRCNdU6ACoBUf0x5XercHzIHnGl&blockType=whiteboard&blockToken=FxczwOVDphOoPobOAuPcwwQrnWc#VRCNdU6ACoBUf0x5XercHzIHnGl">
+                        <div class="card-image"><img src="img2/AI大模型/提示工程.jpg" alt="提示工程"></div>
                         <div class="card-title">提示工程</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=GoGsdlp59or1oNxPbrJcx5RnnBh&blockType=whiteboard&blockToken=Ls4gwZBdQh8Q6hbc3Aac5KY6nDd#GoGsdlp59or1oNxPbrJcx5RnnBh">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/检索增强生成.jpg" alt="检索增强生成">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=GoGsdlp59or1oNxPbrJcx5RnnBh&blockType=whiteboard&blockToken=Ls4gwZBdQh8Q6hbc3Aac5KY6nDd#GoGsdlp59or1oNxPbrJcx5RnnBh">
+                        <div class="card-image"><img src="img2/AI大模型/检索增强生成.jpg" alt="检索增强生成"></div>
                         <div class="card-title">检索增强生成（RAG）</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=UiO0dveLtoptNvxSHrrc7a73n3g&blockType=whiteboard&blockToken=Ul24w6B21heFW9bLZHyc0GZXnig#UiO0dveLtoptNvxSHrrc7a73n3g">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/Agent智能体.jpg" alt="Agent智能体">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=UiO0dveLtoptNvxSHrrc7a73n3g&blockType=whiteboard&blockToken=Ul24w6B21heFW9bLZHyc0GZXnig#UiO0dveLtoptNvxSHrrc7a73n3g">
+                        <div class="card-image"><img src="img2/AI大模型/Agent智能体.jpg" alt="Agent智能体"></div>
                         <div class="card-title">Agent智能体</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=HVHgdb6Gfo8YP0xdKDncvuPnnGc&blockType=whiteboard&blockToken=Ea9nwACZ7hvZOebQvubcLVORnzf#HVHgdb6Gfo8YP0xdKDncvuPnnGc">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/模型微调.jpg" alt="模型微调">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=HVHgdb6Gfo8YP0xdKDncvuPnnGc&blockType=whiteboard&blockToken=Ea9nwACZ7hvZOebQvubcLVORnzf#HVHgdb6Gfo8YP0xdKDncvuPnnGc">
+                        <div class="card-image"><img src="img2/AI大模型/模型微调.jpg" alt="模型微调"></div>
                         <div class="card-title">模型微调（FT）</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=ZOBMdRqwqoARhDxzx6Fccqg8njh&blockType=whiteboard&blockToken=KR9BwzSSKhkjOGbOwCMcoi6rnLg#ZOBMdRqwqoARhDxzx6Fccqg8njh">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/人类反馈强化学习.jpg" alt="人类反馈强化学习">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=ZOBMdRqwqoARhDxzx6Fccqg8njh&blockType=whiteboard&blockToken=KR9BwzSSKhkjOGbOwCMcoi6rnLg#ZOBMdRqwqoARhDxzx6Fccqg8njh">
+                        <div class="card-image"><img src="img2/AI大模型/人类反馈强化学习.jpg" alt="人类反馈强化学习"></div>
                         <div class="card-title">人类反馈强化学习（RLHF）</div>
                     </div>
-                    <div class="card" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=LmNHdQqFmojjsmxIICqcZUYgnAg&blockType=whiteboard&blockToken=YNT6wvmv6hAdAubtaZkcF7xbnXg#LmNHdQqFmojjsmxIICqcZUYgnAg">
-                        <div class="card-image">
-                            <img src="img2/AI大模型/模型评测.jpg" alt="模型评测">
-                        </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=LmNHdQqFmojjsmxIICqcZUYgnAg&blockType=whiteboard&blockToken=YNT6wvmv6hAdAubtaZkcF7xbnXg#LmNHdQqFmojjsmxIICqcZUYgnAg">
+                        <div class="card-image"><img src="img2/AI大模型/模型评测.jpg" alt="模型评测"></div>
                         <div class="card-title">模型评测</div>
+                    </div>
+                    <div class="card reveal" data-url="https://qcnlerzhbvtc.feishu.cn/docx/MjEgdkCt3onrvWxqOX9cPWtenmf?openbrd=1&doc_app_id=501&blockId=S3wFdjqh0oR1USxW3kEcsFalnuq&blockType=whiteboard&blockToken=IUpqw9h8OhQvgTbF4Nic4ZP6nlq#S3wFdjqh0oR1USxW3kEcsFalnuq">
+                        <div class="card-image"><img src="img2/AI大模型/Agent智能体.jpg" alt="模型评测"></div>
+                        <div class="card-title">harness</div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        
-            
+        <footer class="site-footer reveal">
+            <p>地址：北京市海淀区清华大学学生公寓32号楼</p>
+            <p class="footer-contact">
+                <span>ryf030</span>
+                <a href="mailto:1075101530@qq.com">1075101530@qq.com</a>
+                <a href="tel:15935183788">15935183788</a>
+            </p>
+        </footer>
+    </main>
 
-        <!-- 右侧导航 -->
-        <div class="right-section">
-            <nav>
-                <a href="#" class="active"><i class="bi bi-house"></i> 自我介绍</a>
-                <a href="#product-manager"><i class="bi bi-briefcase"></i> 职业履历</a>
-                <a href="#product"><i class="bi bi-briefcase-fill"></i> 产品知识</a>
-                <a href="#technology"><i class="bi bi-code"></i> 技术底蕴</a>
-                <a href="#aimodel"><i class="bi bi-robot"></i> AI大模型</a>
-            </nav>
-            <div class="tags">
-                <span class="tag">实事求是</span>
-                <span class="tag">自强不息</span>
-                <span class="tag">效率至上</span>
-                <span class="tag">终身学习</span>
-                <span class="tag">......</span>
-            </div>
-            
-            <!-- AI对话按钮 -->
-            <div class="ai-chat-button-container">
-                <button id="ai-chat-button" class="ai-chat-button">
-                    <i class="bi bi-robot"></i> 与我对话
-                </button>
-            </div>
-        </div>
-    </div>
     <script src="script.js"></script>
 
-    <!-- 网页预览弹窗 -->
     <div id="web-preview-modal" class="web-preview-modal">
         <div class="web-preview-modal-content">
-            <button id="web-preview-close" class="web-preview-close">&times;</button>
+            <button type="button" id="web-preview-close" class="web-preview-close" aria-label="关闭">&times;</button>
             <div class="web-preview-body">
-                <iframe id="web-preview-iframe" src="" frameborder="0" allowfullscreen></iframe>
+                <iframe id="web-preview-iframe" src="" title="文档预览"></iframe>
             </div>
         </div>
     </div>
 
-    <!-- AI对话窗口 -->
-    <div id="ai-chat-container" class="ai-chat-container">
-        <div class="ai-chat-window">
-            <div class="ai-chat-header">
-                <h3>与我对话</h3>
-                <button id="ai-chat-close" class="ai-chat-close">
-                    <i class="bi bi-x"></i>
+    <!-- 职业履历详情（默认与列表一致，可在 script 中扩展 careerDetailOverrides） -->
+    <div id="career-detail-modal" class="career-detail-modal" aria-hidden="true">
+        <div class="career-detail-panel" role="dialog" aria-modal="true" aria-labelledby="career-detail-title">
+            <button type="button" class="career-detail-close" id="career-detail-close" aria-label="关闭">
+                <i class="bi bi-x-lg" aria-hidden="true"></i>
+            </button>
+            <p class="career-detail-meta" id="career-detail-date"></p>
+            <h3 id="career-detail-title" class="career-detail-heading"></h3>
+            <div class="career-detail-body" id="career-detail-body"></div>
+        </div>
+    </div>
+
+    <div id="ai-chat-container" class="ai-chat-container" aria-hidden="true">
+        <div class="ai-chat-window" role="dialog" aria-labelledby="ai-chat-title" aria-modal="true">
+            <header class="ai-chat-header">
+                <div class="ai-chat-header-text">
+                    <h2 id="ai-chat-title">与我对话</h2>
+                </div>
+                <button type="button" id="ai-chat-close" class="ai-chat-close" aria-label="关闭">
+                    <i class="bi bi-x-lg"></i>
                 </button>
-            </div>
+            </header>
             <div id="ai-chat-body" class="ai-chat-body">
                 <div class="ai-message">
                     <div class="message-content">
@@ -382,12 +320,12 @@
                     </div>
                 </div>
             </div>
-            <div class="ai-chat-footer">
-                <input type="text" id="ai-chat-input" class="ai-chat-input" placeholder="输入你的问题...">
-                <button id="ai-chat-send" class="ai-chat-send">
-                    <i class="bi bi-send"></i>
+            <footer class="ai-chat-footer">
+                <input type="text" id="ai-chat-input" class="ai-chat-input" placeholder="输入问题，按 Enter 发送" autocomplete="off">
+                <button type="button" id="ai-chat-send" class="ai-chat-send" aria-label="发送">
+                    <i class="bi bi-arrow-up" aria-hidden="true"></i>
                 </button>
-            </div>
+            </footer>
         </div>
     </div>
 </body>
